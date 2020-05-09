@@ -1,0 +1,5 @@
+{
+  "wantedNumberOfResultsPerActivity": 1,
+  "batchSizeHTMLDownloading": 10,
+  "prodMode": false
+}
