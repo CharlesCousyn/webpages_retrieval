@@ -75,8 +75,8 @@ async function download_html(url, html_path_without_extension)
 	{
 		const dom = await  JSDOM.fromURL(url,
 			{
-				//runScripts: "dangerously",
-				//resources: "usable",
+				runScripts: "dangerously",
+				resources: "usable",
 				pretendToBeVisual: true
 			});
 
