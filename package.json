@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "esm": "^3.2.25",
-    "jsdom": "^16.2.2",
+    "jsdom": "^16.4.0",
     "mkdirp": "^1.0.4",
     "rxjs": "^6.5.5"
   }
