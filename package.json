@@ -5,8 +5,8 @@
   "main": "main.js",
   "scripts": {
     "postinstall": "mkdirp ./outputData",
-    "experimentation": "node -r esm experimentation.js",
-    "start": "node -r esm main.js"
+    "start": "node -r esm main.js",
+    "filterRes": "node -r esm getStructWebstites.js"
   },
   "keywords": [],
   "author": "Charles Cousyn",

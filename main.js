@@ -73,9 +73,9 @@ async function download_html(url, html_path_without_extension)
 {
 	try
 	{
-		const dom = await  JSDOM.fromURL(url,
+		const dom = await JSDOM.fromURL(url,
 			{
-				runScripts: "dangerously",
+				//runScripts: "dangerously",
 				resources: "usable",
 				pretendToBeVisual: true
 			});
@@ -91,10 +91,11 @@ async function download_html(url, html_path_without_extension)
 	}
 }
 
-async function run()
+async function run(pathToWebResults)
 {
-	let filePath = `./data/${filesSystem.readdirSync('./data', { encoding: 'utf8' })}`;
-	let arrayOfActivityResults = JSON.parse(filesSystem.readFileSync(filePath));
+	let filePath = pathToWebResults;
+	let arrayOfActivityResults = JSON.parse(filesSystem.readFileSync(filePath)).filter(act => GENERAL_CONFIG.excludedActivities.includes(act.folderName));
+	console.log(arrayOfActivityResults.map(a => a.folderName))
 
 	//Progress variables
 	let totalNumberOfResults = arrayOfActivityResults.map(activity => activity.realNumberResults).reduce((tot, curr) => tot + curr, 0);
@@ -143,5 +144,5 @@ async function run()
 
 (async () =>
 {
-	await run();
+	await run(GENERAL_CONFIG.pathToWebResults);
 })();

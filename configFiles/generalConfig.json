@@ -1,5 +1,7 @@
 {
-  "wantedNumberOfResultsPerActivity": 1,
+  "pathToWebResults": "./data/filteredDuckduckgoWebResults.json",
+  "wantedNumberOfResultsPerActivity": 1000,
   "batchSizeHTMLDownloading": 10,
-  "prodMode": false
+  "prodMode": false,
+  "excludedActivities": ["answer_the_phone","bake_parmesan_turkey_meatballs","choosing_outfit","clean","cook_pasta"]
 }

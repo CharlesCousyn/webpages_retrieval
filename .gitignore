@@ -80,4 +80,6 @@ node_modules
 
 # Results files
 /outputData/*
+/outputDataFiltered/*
+/oldOutputDataComplete/*
 /oldData/*
