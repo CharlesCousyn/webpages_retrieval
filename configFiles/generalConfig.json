@@ -1,7 +1,7 @@
 {
-  "pathToWebResults": "./data/filteredDuckduckgoWebResults.json",
+  "pathToWebResults": "./data/filteredDuckduckgoWebResults_MANUALLY_ENHANCED.json",
   "wantedNumberOfResultsPerActivity": 1000,
   "batchSizeHTMLDownloading": 10,
   "prodMode": false,
-  "excludedActivities": ["answer_the_phone","bake_parmesan_turkey_meatballs","choosing_outfit","clean","cook_pasta"]
+  "activitiesToUse": ["answer_the_phone","bake_parmesan_turkey_meatballs","choosing_outfit","clean","cook_pasta"]
 }

@@ -14,7 +14,7 @@ async function run()
 
     writeJSONFile(filteredResults, null, "./data/filteredDuckduckgoWebResults.json");
 }
-
+//{title:document.querySelector("#section_0 > a").textContent, url: window.location.href, snippet:""}
 function writeJSONFile(data, replacer, path)
 {
     filesSystem.writeFileSync(path, JSON.stringify(data, replacer, 4), "utf8");
