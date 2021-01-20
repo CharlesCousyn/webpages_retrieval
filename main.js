@@ -94,7 +94,15 @@ async function download_html(url, html_path_without_extension)
 async function run(pathToWebResults)
 {
 	let filePath = pathToWebResults;
-	let arrayOfActivityResults = JSON.parse(filesSystem.readFileSync(filePath)).filter(act => GENERAL_CONFIG.activitiesToUse.includes(act.folderName));
+	let arrayOfActivityResults;
+	if(GENERAL_CONFIG.activitiesToUse.length === 0)
+	{
+		arrayOfActivityResults = JSON.parse(filesSystem.readFileSync(filePath));
+	}
+	else
+	{
+		arrayOfActivityResults = JSON.parse(filesSystem.readFileSync(filePath)).filter(act => GENERAL_CONFIG.activitiesToUse.includes(act.folderName));
+	}
 	console.log(arrayOfActivityResults.map(a => a.folderName))
 
 	//Progress variables
